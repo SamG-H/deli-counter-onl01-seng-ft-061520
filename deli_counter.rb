@@ -5,9 +5,7 @@ def line(line)
     puts 'The line is currently empty.'
   else
     message = 'The line is currently: '
-    line.each do |customer|
-      message << "#{line.index(customer) + 1}. #{customer} "
-    end
+    line.each { |customer| message << "#{line.index(customer) + 1}. #{customer} " }
     puts message.delete_suffix(' ')
   end
 end
